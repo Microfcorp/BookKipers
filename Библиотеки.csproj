@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EBB6650-0306-4586-AE4C-2DB3444C9C12}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Библиотеки</RootNamespace>
+    <AssemblyName>Библиотеки</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BooksTreeNode.cs" />
+    <Compile Include="Books\Book.cs" />
+    <Compile Include="Books\Categories.cs" />
+    <Compile Include="CategoryTreeNode.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operators\Realization.cs" />
+    <Compile Include="Operators\Vozvr.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CSVDocument.cs" />
+    <Compile Include="Reports\IReports.cs" />
+    <Compile Include="Reports\RBalance.cs" />
+    <Compile Include="Reports\ReportLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportLayer.Designer.cs">
+      <DependentUpon>ReportLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RRealiz.cs" />
+    <Compile Include="Reports\RVosvr.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UI\AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddRealiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddRealiz.Designer.cs">
+      <DependentUpon>AddRealiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddVozvr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddVozvr.Designer.cs">
+      <DependentUpon>AddVozvr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoveRealiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RemoveRealiz.Designer.cs">
+      <DependentUpon>RemoveRealiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RemoveVosvr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RemoveVosvr.Designer.cs">
+      <DependentUpon>RemoveVosvr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\ReportLayer.resx">
+      <DependentUpon>ReportLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddRealiz.resx">
+      <DependentUpon>AddRealiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddVozvr.resx">
+      <DependentUpon>AddVozvr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoveRealiz.resx">
+      <DependentUpon>RemoveRealiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RemoveVosvr.resx">
+      <DependentUpon>RemoveVosvr.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
